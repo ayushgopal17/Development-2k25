@@ -17,24 +17,24 @@ app.get("/" ,function(req,res)
 {
     const Johnkidney=users[0].kidney;
 
-    const Numberofkidneys=Johnkidney.length;
+    const Numberofpatient=Johnkidney.length;
 
-    let NumberofHealthykidney = 0;
+    let NumberofHealthyPatient = 0;
 
     for(let i=0; i<Johnkidney.length;i++)
     {
         if (Johnkidney[i].healthy)
         {
-            NumberofHealthykidney = NumberofHealthykidney +1;        }
+            NumberofHealthyPatient = NumberofHealthyPatient +1;        }
     }
 
-    const NumberofUnHealthykidney=Numberofkidneys - NumberofHealthykidney;
+    const NumberofUnHealthypatient=Numberofpatient - NumberofHealthyPatient;
 
 res.json({
 
-    Numberofkidneys,
-    NumberofHealthykidney,
-    NumberofUnHealthykidney
+    Numberofpatient,
+    NumberofHealthyPatient,
+    NumberofUnHealthypatient
 })
 
 
@@ -73,7 +73,7 @@ app.delete("/" ,function(req,res)
         {
          newKidney.push ({
 
-            healthy: false
+            healthy: true
          });
         }
     }
