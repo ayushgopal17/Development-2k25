@@ -3,7 +3,7 @@ const app=express();
 
 app.use(express.json());
 const users= [{
-//
+
     name: "John",
     kidney: [{
       healthy: false
@@ -11,7 +11,7 @@ const users= [{
 
 }];
 
-//
+
 
 app.get("/" ,function(req,res)
 {
