@@ -54,7 +54,22 @@ console.log(ans)
 const arr1= ["Ayush" ,"Aman","Amal","Rahul","kunal","Gaurav"]
 
 
-    const ans1=arr1.filter(function(n)
+//     const ans1=arr1.filter(function(n)
+//     {
+// if(n.startsWith('A'))
+// {
+//     return true;
+// }
+// else {return false;
+
+// }
+// })
+// console.log(ans1)
+
+
+// we can write this as
+
+    const ans1=arr1.filter((n) =>
     {
 if(n.startsWith('A'))
 {
