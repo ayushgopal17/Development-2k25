@@ -10,4 +10,6 @@ const sum = (a,b,c) =>
 
 const ans=sum(0,20,30);
 
+
+
 console.log(ans);
