@@ -3,4 +3,6 @@ database.js
 databaseimp.js
 .cph/
 assignments/
+node_modules/
+
 
