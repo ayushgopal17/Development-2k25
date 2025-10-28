@@ -1,44 +1,33 @@
 import { useState } from "react";
 
 function App(){
-const[todos,setTodos]=useState([{
-  title : "go to gym",
-  description : "go to gym from 7-9",
-  completed: false
-},
-{
-   title : "study DSA",
-  description : "Study DSAfrom 9-11",
-  completed: true
-}]);
+const[todos,setTodos]=useState([]);
+
 
 function addTodo(){
-  setTodos([...todos,{
-    title: "new todo",
-    description: "description of new todo"
-  }])
+  let newTodo=[];
+  for(let i=0;i<todos.length;i++){
+    newTodo.push(todos[i])
+  }
+  newTodo.push({
+    title: "asda",
+    description:"asaasaa"
+  })
+  setTodos(newTodo);
+
 }
-return(
-  <div>
-    <button onClick={addTodo}>Add a random Todo</button>
-  {
-  todos.map(function(todo){
-    return <Todo title={todo.title} description={todo.description} />
-  })}
-
-  </div>
-
-)
-}
-
 function Todo(props){
   
 
-return <div>
-  <h1>{props.title}</h1>
-  <h2>{props.description}</h2>
-</div>
+return
+( <div>
+  <button onClick={addTodo}>Add a random todo</button>
+  {todos.map(function(todo){
+return<todo title={todo.title} description={todo.description}></todo> 
+  })}
+
+  </div> 
+)
 }
 
-export default App
-
+export default App  
