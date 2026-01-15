@@ -3,7 +3,7 @@ import { Client } from "pg";
 
 async function insertData(username: string, email: string, password: string) {
 const client = new Client({
-  
+ 
 
 
  

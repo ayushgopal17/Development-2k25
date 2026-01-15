@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const pg_1 = require("pg");
 async function insertData(username, email, password) {
     const client = new pg_1.Client({
-        connectionString: "postgresql://neondb_owner:npg_NO0HPUALz5iy@ep-super-band-ada4eef1-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+        
     });
     try {
         await client.connect(); // Ensure client connection is established
